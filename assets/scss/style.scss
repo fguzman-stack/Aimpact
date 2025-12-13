@@ -1,0 +1,200 @@
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+body {
+    font-family: $font-primary;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    overflow-x: hidden;
+    @include transition(background-color, 0.3s, ease);
+    color-scheme: light dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-secondary;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    @include transition;
+    
+    &:hover {
+        color: var(--primary-hover);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Hero Section
+.hero-section {
+    padding: 8rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(0,0,0,0) 70%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, rgba(0,0,0,0) 70%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .lead {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+    }
+    
+    .hero-img-container {
+        position: relative;
+        z-index: 1;
+        animation: float 6s ease-in-out infinite;
+        
+        img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+// Footer
+.footer {
+    background-color: var(--bg-light);
+    padding: 5rem 0 2rem;
+    margin-top: 5rem;
+    
+    .footer-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: inline-block;
+        @include gradient-text;
+    }
+    
+    h5 {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            margin-bottom: 0.75rem;
+            
+            a {
+                color: var(--text-muted);
+                &:hover {
+                    color: var(--primary-color);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    
+    .social-links {
+        a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            color: var(--text-muted);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            border: 1px solid var(--border-color);
+            
+            &:hover {
+                background: var(--primary-color);
+                color: white;
+                border-color: var(--primary-color);
+            }
+        }
+    }
+}
+
+// Integrations
+.integrations-section {
+    .logo-wall {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        opacity: 0.7;
+        
+        img, svg, i {
+            height: 40px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            
+            &:hover {
+                filter: grayscale(0%);
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// Utilities
+.bg-light-alt {
+    background-color: var(--bg-light);
+}
+
+.text-gradient {
+    @include gradient-text;
+}
+
+[dir="rtl"] {
+    body {
+        direction: rtl;
+        text-align: right;
+    }
+    .section-title {
+        text-align: right;
+        p {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}

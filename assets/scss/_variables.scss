@@ -1,0 +1,73 @@
+// Font Families
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+// Colors - Using CSS Variables for Theme Support
+:root {
+    --primary-color: #4f46e5; // Indigo 600
+    --primary-hover: #4338ca; // Indigo 700
+    --secondary-color: #ec4899; // Pink 500
+    --accent-color: #06b6d4; // Cyan 500
+    
+    --bg-body: #ffffff;
+    --bg-body-rgb: 255, 255, 255;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b; // Slate 800
+    --text-muted: #64748b; // Slate 500
+    --border-color: #e2e8f0; // Slate 200
+    
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
+    --gradient-text: linear-gradient(to right, #4f46e5, #ec4899);
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-neon: 0 0 20px rgba(79, 70, 229, 0.3);
+    
+    --bs-body-color: var(--text-main);
+    --bs-secondary-color: var(--text-muted);
+    --bs-link-color: var(--primary-color);
+    --bs-link-hover-color: var(--primary-hover);
+}
+
+[data-theme="dark"] {
+    --bg-body: #0f172a; // Slate 900
+    --bg-body-rgb: 15, 23, 42;
+    --bg-light: #1e293b; // Slate 800
+    --bg-card: #1e293b; // Slate 800
+    --text-main: #f1f5f9; // Slate 100
+    --text-muted: #94a3b8; // Slate 400
+    --border-color: #334155; // Slate 700
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+    --shadow-neon: 0 0 25px rgba(79, 70, 229, 0.5);
+    
+    --bs-body-color: var(--text-main);
+    --bs-secondary-color: var(--text-muted);
+    --bs-link-color: var(--primary-color);
+    --bs-link-hover-color: var(--primary-hover);
+}
+
+// Bootstrap Overrides (if needed in SASS context, but here we mainly use CSS Vars)
+$primary: #4f46e5;
+
+[data-palette="purple"] {
+    --primary-color: #7c3aed;
+    --primary-hover: #6d28d9;
+    --secondary-color: #a855f7;
+    --accent-color: #22d3ee;
+    --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+    --gradient-text: linear-gradient(to right, #7c3aed, #ec4899);
+}
+
+[data-palette="neon"] {
+    --primary-color: #14b8a6;
+    --primary-hover: #0d9488;
+    --secondary-color: #22d3ee;
+    --accent-color: #a78bfa;
+    --gradient-primary: linear-gradient(135deg, #14b8a6 0%, #a78bfa 100%);
+    --gradient-text: linear-gradient(to right, #14b8a6, #a78bfa);
+}

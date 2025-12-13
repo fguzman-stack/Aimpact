@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación — AImpact HTML Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../pages/index.html">
+        <i class="fa-solid fa-brain text-primary fa-lg"></i>
+        <span class="fw-bold fs-4">AImpact</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"></div>
+    </div>
+  </nav>
+
+  <main class="container py-5 mt-5">
+    <header class="section-title">
+      <span class="subtitle">Guía rápida</span>
+      <h2>Documentación <span>del Template</span></h2>
+      <p>Todo lo necesario para instalar, personalizar y desplegar AImpact.</p>
+    </header>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Estructura del proyecto</h3>
+      <pre class="bg-light p-3 rounded border"><code>/
+├─ assets/
+│  ├─ css/           CSS compilado (style.css)
+│  ├─ js/            JS de UI (main.js)
+│  ├─ scss/          Fuentes SCSS (variables, mixins, componentes)
+│  └─ images/        Imágenes (coloca las tuyas aquí)
+├─ pages/            Páginas HTML listas (index, pricing, blog, etc.)
+└─ documentation/    Esta guía</code></pre>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Requisitos</h3>
+      <ul>
+        <li>Navegador moderno (Chrome/Firefox/Edge/Safari).</li>
+        <li>Opcional: Node.js 18+ si deseas compilar SCSS localmente.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Vista local</h3>
+      <ol>
+        <li>Abre el directorio raíz del proyecto.</li>
+        <li>Usa cualquier servidor estático (por ejemplo, <code>http-server</code> o la extensión Live Server) y navega a <code>/pages/index.html</code>.</li>
+      </ol>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Compilar SCSS (opcional)</h3>
+      <p>El CSS ya está compilado en <code>assets/css/style.css</code>. Si deseas editar SCSS:</p>
+      <pre class="bg-light p-3 rounded border"><code># Instala Sass (una vez)
+npm i -D sass
+
+# Compila SCSS a CSS
+npx sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map</code></pre>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Personalización</h3>
+      <ul>
+        <li>Colores y tema: variables en <code>assets/scss/_variables.scss</code> y soporte claro/oscuro con <code>data-theme</code>.</li>
+        <li>Componentes y estilos: <code>assets/scss/_components.scss</code>.</li>
+        <li>JS de UI (modo oscuro, navbar sticky, pricing toggle): <code>assets/js/main.js</code>.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="fw-bold">Despliegue</h3>
+      <ul>
+        <li>Sube el proyecto a cualquier hosting estático (Netlify, Vercel, GitHub Pages).</li>
+        <li>Asegúrate de que el documento de inicio sea <code>pages/index.html</code>.</li>
+      </ul>
+    </section>
+
+    <section class="mb-4">
+      <h3 class="fw-bold">Soporte y licencias</h3>
+      <p>Incluye un archivo <code>README</code>, nota de soporte básico y licencia del comprador. En marketplaces la licencia la provee la plataforma.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <hr class="my-4">
+      <p class="text-muted mb-0">© 2025 AImpact Template. Documentación.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

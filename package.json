@@ -1,0 +1,14 @@
+{
+  "name": "aimpact-html-template",
+  "version": "1.0.0",
+  "description": "AImpact - AI Startup & SaaS Landing/Multipurpose HTML Template",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass assets/scss/style.scss assets/css/style.css --watch"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
