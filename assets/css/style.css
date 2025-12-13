@@ -215,6 +215,41 @@
   opacity: 0.6;
 }
 
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse {
+    background-color: rgba(var(--bg-body-rgb), 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .navbar .navbar-collapse .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    margin: 0.25rem 0 0;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+  .navbar .dropdown-item {
+    text-align: center;
+  }
+  .navbar .navbar-collapse .d-flex {
+    justify-content: center;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+}
+
 .section-title {
   margin-bottom: 3rem;
   text-align: center;
