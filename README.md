@@ -2,6 +2,9 @@
 
 Plantilla HTML multipágina para startups de IA y SaaS. Incluye modo oscuro, animaciones AOS, paletas configurables con variables CSS/SCSS, y páginas listas (landing, pricing, blog, about, contact, etc.).
 
+## Live Demo
+- https://fguzman-stack.github.io/Aimpact/pages/index.html
+
 ## Demo local
 - Sirve la carpeta raíz con cualquier servidor estático y abre `pages/index.html`.
 - Requisitos: navegador moderno. Opcional: Node.js si compilas SCSS.
